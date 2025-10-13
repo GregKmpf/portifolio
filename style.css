@@ -1,14 +1,348 @@
+/* Estilos gerais para a página */
 body {
   margin: 0;
-  padding: 0; }
-
-header {
-  display: flex;
-  align-items: center; 
-  gap: 15px;          
-  
+  padding: 0;
+  font-family: sans-serif; /* Adicionado para uma fonte mais legível */
 }
 
-a{
-    margin: 0;
+/* O header agora é o container da imagem */
+header {
+  /* Define a altura para 50% da altura da tela (viewport height) */
+  height: 30vh;
+  margin-bottom: 40px;
+
+  /* As propriedades de imagem de fundo foram movidas para cá */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Usamos Flexbox para centralizar os links facilmente */
+  display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center;   /* Centraliza na vertical */
+  gap: 30px; /* Adiciona um espaço entre os links */
+}
+
+/* Estilo para dar DESTAQUE aos links dentro do header */
+header a {
+  color: white; /* Branco tem mais contraste com o fundo escuro */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  padding: 10px 15px; /* Adiciona espaçamento interno para facilitar o clique */
+  border-radius: 5px; /* Arredonda as bordas */
+  transition: background-color 0.3s ease; /* Efeito suave para o hover */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+header a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Cria um leve destaque no fundo */
+}
+
+/*----------------------------------------*\
+
+/* --- Seção Sobre Mim --- */
+
+.about-section {
+  display: flex; /* ATIVA O FLEXBOX: cria o layout de colunas */
+  align-items: center; /* Alinha o texto e a imagem verticalmente no centro */
+  justify-content: center; /* Centraliza o conteúdo na página */
+  gap: 60px; /* Espaço entre o texto e a imagem */
+  
+  padding: 80px 40px; /* Espaçamento interno (cima/baixo e lados) */
+  background-color: #f4f4f4; /* Uma cor de fundo suave para a seção */
+  max-width: 1200px; /* Largura máxima para não ficar muito largo em telas grandes */
+  margin: 0 auto; /* Centraliza a seção na tela */
+}
+
+/* Coluna da esquerda (texto) */
+.text-content {
+  flex: 1; /* Permite que a coluna de texto cresça e ocupe o espaço disponível */
+  max-width: 600px; /* Largura máxima para o texto não ficar muito longo */
+}
+
+.text-content h2 {
+  font-size: 2.5rem; /* Tamanho grande para o título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.text-content p {
+  font-size: 1.1rem; /* Tamanho de fonte confortável para leitura */
+  line-height: 1.6; /* Espaçamento entre as linhas */
+}
+
+/* Coluna da direita (imagem) */
+.image-content {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+/* O estilo que cria o CÍRCULO */
+.profile-picture {
+  width: 250px;  /* Largura da imagem */
+  height: 250px; /* Altura da imagem (igual à largura para formar um quadrado) */
+  
+  border-radius: 50%; /* A MÁGICA: transforma o quadrado em um círculo perfeito */
+  
+  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+  
+  border: 5px solid white; /* Borda branca para destacar a foto */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+}
+
+
+/* --- Responsividade para Celulares --- */
+/* Quando a tela for menor que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* As colunas ficam uma em cima da outra */
+    text-align: center; /* Centraliza o texto */
+    gap: 40px;
+  }
+}
+
+
+/* --- Estilos Comuns para Seções Principais --- */
+#skills-section,
+#projects-section,
+#experience-education {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centraliza títulos e alguns elementos */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Cor de fundo diferente para melhor contraste */
+#skills-section {
+    background-color: #f9f9f9; 
+}
+#experience-education {
+    background-color: #e6e6e6;
+}
+
+
+
+/* --- Seção de Habilidades --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+.skill-card i {
+    color: #007bff; /* Cor de destaque para os ícones */
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin: 10px 0;
+}
+
+
+
+/* --- Seção de Projetos --- */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    text-align: left;
+    overflow: hidden; /* Garante que a imagem se ajuste ao raio */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 15px 20px 5px;
+}
+
+.project-card p {
+    padding: 0 20px;
+    font-size: 0.95rem;
+}
+
+.project-links {
+    padding: 15px 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-demo, .btn-repo {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-demo {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-repo {
+    background-color: #333;
+    color: white;
+}
+
+.btn-demo:hover {
+    background-color: #0056b3;
+}
+.btn-repo:hover {
+    background-color: #555;
+}
+
+.technologies {
+    font-size: 0.85rem !important;
+    color: #666;
+    margin-top: -5px;
+    padding-bottom: 20px !important;
+}
+
+
+
+/* --- Seção de Experiência e Educação (Timeline) --- */
+#experience-education h2 {
+    margin-bottom: 50px;
+}
+
+.timeline {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.timeline-item {
+    background-color: white;
+    padding: 25px;
+    border-left: 5px solid #007bff; /* Linha de destaque */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.timeline-item h3 {
+    margin: 0 0 10px 0;
+    color: #007bff;
+}
+
+.timeline-item .period,
+.timeline-item .company {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.timeline-item ul li {
+    margin-bottom: 5px;
+}
+
+/* --- Ajustes de Responsividade para as Novas Seções --- */
+@media (max-width: 768px) {
+    /* Diminui o espaçamento em telas menores */
+    #skills-section,
+    #projects-section,
+    #experience-education {
+        padding: 60px 20px;
+    }
+
+    /* Permite que cards de habilidades fiquem em colunas simples */
+    .skill-card {
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    /* Cards de projeto ficam em coluna simples */
+    .projects-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .project-card {
+        width: 100%;
+    }
+}
+
+/* --- Estilos do Rodapé --- */
+#footer {
+  width: 100%;
+  /* CORRIGIDO: Use background-image para gradientes. */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); 
+  
+  /* Cor de fallback caso o gradiente não carregue */
+  background-color: #333; 
+
+  color: white; /* Define a cor do texto como branco para contraste */
+  text-align: center; /* Centraliza o texto */
+  padding: 20px 0; /* Adiciona espaçamento vertical */
+  margin-top: 50px; /* Adiciona um espaço acima do rodapé para separação */
+  font-size: 0.9rem;
+}
+
+#footer p {
+    margin: 0; /* Remove a margem padrão do parágrafo dentro do rodapé */
+}
+
+/* --- Estilos para a Subseção de Outras Habilidades --- */
+.other-skills {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #e9ecef; /* Um fundo sutil para destacar a lista */
+    border-radius: 8px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.other-skills h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.other-skills p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
