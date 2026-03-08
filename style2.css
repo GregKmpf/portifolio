@@ -1,46 +1,36 @@
 /* --- Página de Certificações --- */
-#certificacoes-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-#certificacoes-main h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.certificados-container {
+/* Estilo para quando a imagem ainda não existe */
+.certificado-item a {
+    display: block;
+    background-color: #e0e0e0; /* Cor cinza neutra */
+    height: 200px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    text-decoration: none;
+    position: relative;
 }
 
-.certificado-item {
-    width: 300px; /* Largura fixa para os cartões */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.certificado-item:hover {
-    transform: translateY(-5px);
+/* Ícone de "imagem" ou "certificado" no centro do card vazio */
+.certificado-item a::before {
+    content: '\f15c'; /* Ícone de documento do Font Awesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 3rem;
+    color: #999;
 }
 
 .certificado-item img {
     width: 100%;
-    height: 200px; /* Altura fixa para visualização consistente */
-    object-fit: cover; /* Recorta se necessário, sem distorcer */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-.certificado-item p {
-    padding: 10px 15px;
-    font-weight: bold;
-    background-color: #f4f4f4;
-    margin: 0;
+/* Esconde o ícone se a imagem carregar com sucesso */
+.certificado-item img:not([src=""]) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
