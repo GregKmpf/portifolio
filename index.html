@@ -3,210 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Gregori Kempf</title>
 </head>
 <body>
-   <header>
-    <a href="index.html">Home</a> 
-    
-    <a href="certificados.html">Certificações</a> 
-    
-    <a href="contato.html">Contato</a> 
-</header>
+    <header>
+        <a href="index.html" class="active">Home</a>
+        <a href="certificados.html">Certificações</a>
+        <a href="contato.html">Contato</a>
+    </header>
 
-        <section class="about-section">
+    <section class="about-section">
         <div class="text-content">
-            <h2>Sobre Mim</h2>
+            <p class="eyebrow">Perfil</p>
+            <h2>Gregori Kempf</h2>
             <p>
-                Olá! Meu nome é Gregori Kempf. Gosto muito de criar coisas, por isso até me interesso muito em desenvolvimento
-                e engenharia de software, sempre procuro aprender mais, pois ainda há muitas coisas a aprender nesse mundo vasto de tecnologias
+                Olá! Gosto muito de criar coisas, por isso me interesso em desenvolvimento
+                e engenharia de software — sempre buscando aprender mais, já que ainda há muito
+                a explorar nesse mundo vasto de tecnologias.
             </p>
             <p>
                 Sinta-se à vontade para explorar meu portfólio e entrar em contato!
             </p>
+            <div class="role-tags">
+                <span>Desenvolvimento</span>
+                <span>Infra &amp; Redes</span>
+                <span>Suporte técnico</span>
+            </div>
         </div>
         <div class="image-content">
             <img src="images/me2.jpeg" alt="Foto de Gregori Kempf" class="profile-picture">
         </div>
-        </section>
-
-
+    </section>
 
     <main>
-        <main>
-    <section id="skills-section">
-    <h2>Linguagens e Tecnologias</h2>
-    
-    <div class="skills-grid">
-        
-        <div class="skill-card">
-            <i class="fab fa-python fa-2x"></i>
-            <h3>Python</h3>
-            <p>Foco em Desenvolvimento e Programação Orientada a Objetos (POO) para sistemas Back-end.</p>
-        </div>
-        
-        <div class="skill-card">
-            <i class="fas fa-cogs fa-2x"></i> <h3>C++</h3>
-            <p>Programação Competitiva e aprendizado de Estruturas de Dados I e II.</p>
-        </div>
-        
-        <div class="skill-card">
-            <i class="fab fa-js fa-2x"></i>
-            <h3>JavaScript</h3>
-            <p>Habilidade na criação de sites e Front-end dinâmico utilizando frameworks modernos.</p>
-        </div>
-        
-        <div class="skill-card">
-            <i class="fas fa-database fa-2x"></i>
-            <h3>PostgreSQL</h3>
-            <p>Utilização dessa tecnologia em Banco de Dados I e Banco de dados II</p>
-        </div>
-        
-    </div>
+        <section id="skills-section">
+            <div class="section-heading">
+                <p class="eyebrow">Stack</p>
+                <h2>Linguagens e Tecnologias</h2>
+            </div>
 
-    <div class="other-skills">
-        <h3>Outras Linguagens e Tecnologias Já Usadas:</h3>
-        <p>
-            Dart, Assembly, C, TypeScript, MongoDB, SQL server.
-        </p>
-    </div>
-    
-</section>
-    <section id="projects-section">
-        <h2>Projetos em Destaque</h2>
-        <div class="projects-container">
-            <article class="project-card">
-                
-                <h3>Sistemas Operacionais II</h3>
-                <p>Simulador de Memória Virtual - Paginação por Demanda.</p>
-                <div class="project-links">
-                    
-                    <a href="https://github.com/GregKmpf/VirtualMemory_SO2.git" target="_blank" class="btn-repo">GitHub</a>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python fa-2x"></i>
+                    <h3>Python</h3>
+                    <p>Foco em Desenvolvimento e Programação Orientada a Objetos (POO) para sistemas Back-end.</p>
                 </div>
-                <p class="technologies">Javascript, HTML, CSS</p>
-            </article>
 
-
-            <article class="project-card">
-                
-                <h3>API de um BLOG para estudos</h3>
-                <p>API utilizando REACT, Typescript, Postman, PostgreSQL, ViteJS.</p>
-                <div class="project-links">
-
-                    <a href="https://github.com/GregKmpf/Blog.git" target="_blank" class="btn-repo">GitHub</a>
+                <div class="skill-card">
+                    <i class="fas fa-cogs fa-2x"></i>
+                    <h3>C++</h3>
+                    <p>Programação Competitiva e aprendizado de Estruturas de Dados I e II.</p>
                 </div>
-                <p class="technologies">REACT, Typescript, Postman, PostgreSQL, ViteJS</p>
-            </article>
 
-               <article class="project-card">
-                
-                <h3>Programação Orientada a Objetos</h3>
-                <p>Dart com Programação Orientada a Objetos</p>
-                <div class="project-links">
-                    
-                    <a href="https://github.com/GregKmpf/UPF-3_Sem-POO-Trabalho_Final.git" target="_blank" class="btn-repo">GitHub</a>
+                <div class="skill-card">
+                    <i class="fab fa-js fa-2x"></i>
+                    <h3>JavaScript</h3>
+                    <p>Habilidade na criação de sites e Front-end dinâmico utilizando frameworks modernos.</p>
                 </div>
-                <p class="technologies">Dart</p>
-            </article>
 
+                <div class="skill-card">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h3>PostgreSQL</h3>
+                    <p>Utilização dessa tecnologia em Banco de Dados I e Banco de Dados II.</p>
+                </div>
+            </div>
 
-        </div>
-    </section>
-
-   <section id="experience-education">
-    <h2>Experiência & Formação</h2>
-
-    <div class="timeline">
-        
-        <div class="timeline-item">
-            <h3>Jovem Aprendiz Stara Desenvolvimento Mobile</h3>
-            <span class="period">Janeiro 2022 - Dezembro 2022</span>
-            <span class="company">Stara</span>
-            <ul>
-                <li>Aprendizagem de como é o ambiente na empresa</li>
-                <li>Desenvolvimento com Java</li>
-                <li>Visita a vários setores da empresa</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Estágio em suporte na Eletrocar</h3>
-            <span class="period">Abril 2023 - março 2024</span>
-            <span class="company">Eletrocar centrais elétricas</span>
-            <ul>
-                <li>Suporte ao usuário</li>
-                <li>Manutenção de equipamentos</li>
-                <li>Ajuda na troca de equipamentos</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Caixa/Vendedor de Farmacia</h3>
-            <span class="period">Março 2024 - Janeiro 2025</span>
-            <span class="company">Farmacias São João</span>
-            <ul>
-                <li>atendimento ao cliente, Venda de Produtos: Medicamento, e outros.</li>
-                <li>Limpeza do setor</li>
-                <li>Cuidados com abertura de caixa, fechamento de caixa, pagamentos em dinheiro</li>
-            </ul>
-        </div>
-        
-        <div class="timeline-item">
-            <h3>Estagio Suporte em TI</h3>
-            <span class="period">2025 Jan - Dez 2025</span>
-            <span class="company">Tw transportes</span>
-            <ul>
-                <li>Configuração de PC, Suporte ao usuário, Configuração de equipamentos</li>
-                <li>Manutenção de Hardware como leitores, PCs, Notebooks</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Assistente de expedição</h3>
-            <span class="period">2025 Jan - Fev 2026</span>
-            <span class="company">Tw transportes</span>
-            <ul>
-                <li>Manifestação de Caminhões, utilização do sistema SSW</li>
-                <li>Organização, Baixa de documentos, organização de documentos, envio de equipamentos a outras unidades</li>
-            </ul>
-        </div>
-        <div class="timeline-item">
-            <h3>Tecnico em infra e Redes</h3>
-            <span class="period">2026 Abril - Junho 2026</span>
-            <span class="company">Micheline Engenharia Elétrica</span>
-            <ul>
-                <li>Contratado para lidar com a infraestrutura de Redes de um estabelicimento</li>
-                <li>Organização e expansão da infra de redes</li>
-                <li>Organização de Switches, Hubs, Roteadores, Instalação de Access Points(AP)</li>
-                <li>Ajuda em algumas pequenas partes elétricas e infraestrutura elétrica</li>
-                <li>(Atualmente trabalhando em tempos livres após novo emprego em Maio para renda extra)</li>
-            </ul>
-        </div>
-        <div class="timeline-item">
-            <h3>Eletricista</h3>
-            <span class="period">2026 Maio - Atualmente</span>
-            <span class="company">Eletrocar Centrais Eletricas</span>
-            <ul>
-                <li>Concursado chamado para vaga.</li>
-                <li>Implementação de novas redes de distribuição</li>
-                <li>Utilização de motosserras, Muque, entre outros equipamentos</li>
-                <li>Troca de Transformadores</li>
-                <li>Entre outros serviços</li>
-            </ul>
-        </div>
-        </div> 
-    
-        
-    
+            <div class="other-skills">
+                <h3>Outras Linguagens e Tecnologias já usadas</h3>
+                <p>Dart, Assembly, C, TypeScript, MongoDB, SQL Server.</p>
+            </div>
         </section>
-    <section id="footer">
-         <p>@Todos os direitos reservados</p>
 
-    </section>
+        <section id="projects-section">
+            <div class="section-heading">
+                <p class="eyebrow">Trabalhos</p>
+                <h2>Projetos em Destaque</h2>
+            </div>
 
+            <div class="projects-container">
+                <article class="project-card">
+                    <h3>Sistemas Operacionais II</h3>
+                    <p>Simulador de Memória Virtual - Paginação por Demanda.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/GregKmpf/VirtualMemory_SO2.git" target="_blank" class="btn-repo">GitHub</a>
+                    </div>
+                    <p class="technologies">Javascript, HTML, CSS</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>API de um Blog para estudos</h3>
+                    <p>API utilizando React, TypeScript, Postman, PostgreSQL, ViteJS.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/GregKmpf/Blog.git" target="_blank" class="btn-repo">GitHub</a>
+                    </div>
+                    <p class="technologies">React, TypeScript, Postman, PostgreSQL, ViteJS</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Programação Orientada a Objetos</h3>
+                    <p>Trabalho final em Dart com Programação Orientada a Objetos.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/GregKmpf/UPF-3_Sem-POO-Trabalho_Final.git" target="_blank" class="btn-repo">GitHub</a>
+                    </div>
+                    <p class="technologies">Dart</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience-education">
+            <div class="section-heading">
+                <p class="eyebrow">Trajetória</p>
+                <h2>Experiência &amp; Formação</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Jovem Aprendiz - Desenvolvimento Mobile</h3>
+                    <span class="period">Janeiro 2022 – Dezembro 2022</span>
+                    <span class="company">Stara</span>
+                    <ul>
+                        <li>Aprendizagem sobre o ambiente na empresa</li>
+                        <li>Desenvolvimento com Java</li>
+                        <li>Visita a vários setores da empresa</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Estágio em Suporte</h3>
+                    <span class="period">Abril 2023 – Março 2024</span>
+                    <span class="company">Eletrocar Centrais Elétricas</span>
+                    <ul>
+                        <li>Suporte ao usuário</li>
+                        <li>Manutenção de equipamentos</li>
+                        <li>Ajuda na troca de equipamentos</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Caixa / Vendedor de Farmácia</h3>
+                    <span class="period">Março 2024 – Janeiro 2025</span>
+                    <span class="company">Farmácias São João</span>
+                    <ul>
+                        <li>Atendimento ao cliente, venda de medicamentos e outros produtos</li>
+                        <li>Limpeza do setor</li>
+                        <li>Abertura e fechamento de caixa, pagamentos em dinheiro</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Estágio em Suporte de TI</h3>
+                    <span class="period">Janeiro 2025 – Dezembro 2025</span>
+                    <span class="company">TW Transportes</span>
+                    <ul>
+                        <li>Configuração de PCs, suporte ao usuário, configuração de equipamentos</li>
+                        <li>Manutenção de hardware como leitores, PCs e notebooks</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Assistente de Expedição</h3>
+                    <span class="period">Janeiro 2025 – Fevereiro 2026</span>
+                    <span class="company">TW Transportes</span>
+                    <ul>
+                        <li>Manifestação de caminhões, utilização do sistema SSW</li>
+                        <li>Organização e baixa de documentos, envio de equipamentos a outras unidades</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Técnico em Infra e Redes</h3>
+                    <span class="period">Abril 2026 – Junho 2026</span>
+                    <span class="company">Micheline Engenharia Elétrica</span>
+                    <ul>
+                        <li>Contratado para lidar com a infraestrutura de redes de um estabelecimento</li>
+                        <li>Organização e expansão da infraestrutura de redes</li>
+                        <li>Organização de switches, hubs, roteadores; instalação de access points (AP)</li>
+                        <li>Apoio em pequenas atividades elétricas e de infraestrutura elétrica</li>
+                        <li>(Atualmente atuando em horários livres, para renda extra, após novo emprego em maio)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Eletricista</h3>
+                    <span class="period">Maio 2026 – Atualmente</span>
+                    <span class="company">Eletrocar Centrais Elétricas</span>
+                    <ul>
+                        <li>Aprovado em concurso para a vaga</li>
+                        <li>Implementação de novas redes de distribuição</li>
+                        <li>Utilização de motosserras, munck, entre outros equipamentos</li>
+                        <li>Troca de transformadores</li>
+                        <li>Entre outros serviços</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-    </main>
+
+    <footer>
+        <p>© Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>

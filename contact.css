@@ -1,0 +1,56 @@
+#contato-main {
+  max-width: 900px;
+  margin: 70px auto 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+#contato-main h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+#contato-main > p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.contato-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 46px;
+}
+
+.contato-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-decoration: none;
+  width: 190px;
+  height: 160px;
+  border: 1px solid var(--line);
+  background-color: var(--card);
+  color: var(--ink);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.contato-card span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contato-card:hover {
+  transform: translateY(-6px);
+  color: #fff;
+}
+
+.linkedin:hover { background-color: #0077b5; border-color: #0077b5; }
+.whatsapp:hover { background-color: #25d366; border-color: #25d366; }
+.github:hover   { background-color: #171b20; border-color: #171b20; }
+.instagram:hover{ background-color: #c13584; border-color: #c13584; }

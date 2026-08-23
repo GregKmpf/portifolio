@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* ============================================
+   TOKENS — inspirado em painel elétrico / placa de circuito,
+   já que o Gregori transita entre infra/elétrica e software.
+   ============================================ */
+:root {
+  --ink: #171b20;
+  --ink-soft: #4d5560;
+  --paper: #eef0e7;
+  --paper-alt: #e3e6da;
+  --card: #f8f9f3;
+  --line: #c7ccbd;
+  --copper: #b5622c;
+  --copper-dark: #8f4c22;
+  --circuit: #3d6357;
+  --circuit-bright: #5c9082;
+
+  --font-display: 'IBM Plex Sans', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+a { color: inherit; }
+
+/* ============================================
+   HEADER — remete a um painel de disjuntores:
+   faixa escura, rótulos em mono, indicador aceso no item ativo.
+   ============================================ */
+header {
+  background-color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px 16px;
+  flex-wrap: wrap;
+  border-bottom: 3px solid var(--copper);
+}
+
+header a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d8dbce;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid #333a42;
+  border-radius: 3px;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+header a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4b525c;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+  color: #fff;
+  border-color: var(--circuit-bright);
+  background-color: rgba(92, 144, 130, 0.12);
+  outline: none;
+}
+
+header a:hover::before,
+header a:focus-visible::before {
+  background-color: var(--circuit-bright);
+  box-shadow: 0 0 6px var(--circuit-bright);
+}
+
+header a.active {
+  color: #fff;
+  border-color: var(--copper);
+}
+
+header a.active::before {
+  background-color: var(--copper);
+  box-shadow: 0 0 6px var(--copper);
+}
+
+/* ============================================
+   EYEBROW — rótulo técnico acima dos títulos de seção,
+   com "LED" indicando status ligado.
+   ============================================ */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--copper-dark);
+  margin-bottom: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--circuit-bright);
+  box-shadow: 0 0 5px var(--circuit-bright);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer, #footer {
+  width: 100%;
+  background-color: var(--ink);
+  color: #b9bdb2;
+  text-align: center;
+  padding: 26px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-top: 60px;
+  border-top: 3px solid var(--copper);
+}
+
+footer p, #footer p {
+  margin: 0;
+}

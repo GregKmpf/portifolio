@@ -1,0 +1,246 @@
+/* ============================================
+   SOBRE MIM — layout tipo "crachá de acesso":
+   foto em moldura quadrada com cantos cortados, texto com eyebrow.
+   ============================================ */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 90px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.text-content h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.text-content p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.role-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--circuit);
+  border: 1px solid var(--line);
+  background-color: var(--card);
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+
+.image-content { flex-shrink: 0; }
+
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  border: 3px solid var(--ink);
+  outline: 3px solid var(--copper);
+  outline-offset: 6px;
+  background-color: var(--card);
+}
+
+@media (max-width: 768px) {
+  .about-section { flex-direction: column-reverse; text-align: center; gap: 36px; padding: 60px 24px; }
+  .role-tags { justify-content: center; }
+}
+
+/* ============================================
+   SEÇÕES COMUNS
+   ============================================ */
+#skills-section,
+#projects-section,
+#experience-education {
+  padding: 90px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#skills-section { background-color: var(--paper-alt); }
+
+.section-heading { margin-bottom: 46px; }
+
+.section-heading h2 { font-size: 2rem; margin: 0; }
+
+/* ============================================
+   HABILIDADES — chips como pinos de conector
+   ============================================ */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.skill-card {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--circuit);
+  padding: 26px;
+  width: 250px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-card:hover { border-top-color: var(--copper); transform: translateY(-4px); }
+
+.skill-card i { color: var(--copper); margin-bottom: 14px; }
+
+.skill-card h3 { margin: 6px 0 8px; font-size: 1.1rem; }
+
+.skill-card p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+.other-skills {
+  margin-top: 50px;
+  padding: 28px 30px;
+  background-color: var(--card);
+  border: 1px dashed var(--line);
+}
+
+.other-skills h3 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--circuit);
+  margin: 0 0 12px;
+}
+
+.other-skills p { margin: 0; font-size: 1.02rem; line-height: 1.8; color: var(--ink-soft); }
+
+/* ============================================
+   PROJETOS
+   ============================================ */
+.projects-container {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  width: 340px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.project-card h3 {
+  padding: 20px 22px 4px;
+  font-size: 1.15rem;
+}
+
+.project-card p { padding: 0 22px; font-size: 0.95rem; color: var(--ink-soft); margin: 8px 0; }
+
+.project-links {
+  padding: 16px 22px 22px;
+  display: flex;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.btn-demo, .btn-repo {
+  text-decoration: none;
+  padding: 9px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-demo { background-color: var(--circuit); color: #fff; }
+.btn-demo:hover { background-color: var(--circuit-bright); }
+
+.btn-repo { border-color: var(--ink); color: var(--ink); }
+.btn-repo:hover { background-color: var(--ink); color: #fff; }
+
+.technologies {
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  color: var(--copper-dark) !important;
+  padding-bottom: 22px !important;
+}
+
+@media (max-width: 768px) {
+  #skills-section, #projects-section, #experience-education { padding: 60px 20px; }
+  .skill-card { width: 100%; }
+  .projects-container { flex-direction: column; }
+  .project-card { width: 100%; }
+}
+
+/* ============================================
+   TRAJETÓRIA — trilha de circuito: linha vertical
+   com "pads" quadrados marcando cada posição.
+   ============================================ */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 34px;
+  border-left: 2px solid var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  padding: 24px 26px;
+  margin-bottom: 28px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -41px;
+  top: 26px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--paper);
+  border: 2px solid var(--copper);
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-item h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--ink); }
+
+.timeline-item .period,
+.timeline-item .company {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  margin-right: 14px;
+}
+
+.timeline-item .company { color: var(--circuit); }
+
+.timeline-item ul { margin: 12px 0 0; padding-left: 20px; }
+.timeline-item ul li { margin-bottom: 6px; color: var(--ink-soft); }
